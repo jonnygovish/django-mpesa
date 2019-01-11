@@ -17,7 +17,7 @@ def mpesa(request):
     phone_number = request.POST.get('phone_number')
     print(phone_number)
 
-    access_token = "IEwGqES8rZhvqqgvrMnfIvBkjBrr"
+    access_token = "1Tn2zbR8wS43vvURfh6urLGTkY3l"
     api_url = "https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest"
     headers = { "Authorization": "Bearer %s" % access_token }
     request = {
