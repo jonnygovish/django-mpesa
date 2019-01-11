@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+{% load static %}
+{% load bootstrap4 %}
+
+{% block content%}
+
+<div class="container">
+
+        <div class="card" style="width: 18rem; margin:25%;">
+            <div class="card-body">
+                <h5 class="card-title">Lipa na Mpesa</h5>
+                {% comment %} <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> {% endcomment %}
+                <p class="card-text"></p>
+                <form  action="{%url 'mpesa'%}" method="post" class="card-text">
+                    {%csrf_token%}
+                
+                    {% bootstrap_form form layout='inline' %}
+                    <input type="submit" value="Subscribe">
+                </form>
+            </div>
+        </div>
+{%endblock%}
